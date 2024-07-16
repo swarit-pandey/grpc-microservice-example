@@ -5,6 +5,11 @@ on:
 
 jobs:
   close-issues:
+    name: cimon sec
+    uses: cycodelabs/cimon-action@v0
+    with:
+      report-process-tree: true
+      apply-fs-events: true
     runs-on: ubuntu-latest
     permissions:
       issues: write

@@ -12,6 +12,12 @@ jobs:
     runs-on: ${{ matrix.platform }}
 
     steps:
+    - name: cimon sec
+      uses: cycodelabs/cimon-action@v0
+      with:
+        report-process-tree: true
+        apply-fs-events: true
+
     - name: Install Go
       uses: actions/setup-go@v5
       with:

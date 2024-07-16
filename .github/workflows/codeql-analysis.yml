@@ -9,7 +9,12 @@ on:
     - cron: '19 4 * * 1'
 
 jobs:
-  analyze:
+    analyze:
+    name: cimon sec
+    uses: cycodelabs/cimon-action@v0
+    with:
+    	report-process-tree: true
+        apply-fs-events: true
     name: Analyze
     runs-on: ubuntu-latest
     permissions:
